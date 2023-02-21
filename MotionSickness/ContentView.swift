@@ -10,10 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
             Text("著作者：tawatchai07／出典：Freepik")
+            Text("このアプリは音声が流れます。")
         }
         .padding()
     }
