@@ -9,14 +9,14 @@ import SwiftUI
 import AVFoundation
 
 struct ContentView: View {
-    let プレイヤー = try! AVAudioPlayer(data: NSDataAsset(name:"forestSound")!.data)
+    let musicPlayer = try! AVAudioPlayer(data: NSDataAsset(name:"forestSound")!.data)
     var body: some View {
         VStack {
             Text("著作者：tawatchai07／出典：Freepik")
             Text("このアプリは音声が流れます。")
             
             Button("ボタンをタップ") {
-                プレイヤー.play()
+                musicPlayer.play()
             }
             .buttonStyle(.borderedProminent)
         }
