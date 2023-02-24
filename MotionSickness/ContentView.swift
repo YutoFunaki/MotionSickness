@@ -12,13 +12,12 @@ struct ContentView: View {
     let musicPlayer = try! AVAudioPlayer(data: NSDataAsset(name:"forestSound")!.data)
     var body: some View {
         VStack {
-            Text("著作者：tawatchai07／出典：Freepik")
-            Text("このアプリは音声が流れます。")
+            Text("酔い止めアプリ")
             
-            Button("ボタンをタップ") {
-                musicPlayer.play()
-            }
-            .buttonStyle(.borderedProminent)
+           
+        }
+        .onAppear {
+            //musicPlayer.play()
         }
         .padding()
     }
