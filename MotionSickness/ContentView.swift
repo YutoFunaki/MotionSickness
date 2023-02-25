@@ -16,7 +16,9 @@ struct ContentView: View {
             Text("酔い止めアプリ")
             
             Toggle("", isOn: $value).frame(width: 120)
-            
+                .onChange(of: value) { newValue in
+                    musicPlayer.play()
+                }
             
            
         }
