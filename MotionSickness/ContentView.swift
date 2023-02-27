@@ -10,14 +10,18 @@ import AVFoundation
 
 struct ContentView: View {
     let musicPlayer = try! AVAudioPlayer(data: NSDataAsset(name:"forestSound")!.data)
-    @State private var value = true
+    @State private var value = false
     var body: some View {
         VStack {
             Text("酔い止めアプリ")
             
             Toggle("", isOn: $value).frame(width: 120)
                 .onChange(of: value) { newValue in
-                    musicPlayer.play()
+                    if value == true {
+                        musicPlayer.play()
+                    }else {
+                        musicPlayer.stop()
+                    }
                 }
             
            
